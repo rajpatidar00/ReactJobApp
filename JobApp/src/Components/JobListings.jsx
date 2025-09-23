@@ -39,7 +39,7 @@ export default function JobListings({ isHome }) {
         </h2>
         {/* <!-- Job Listing 1 --> */}
         {loading ? (
-          <div className="flex items-center justify-center h-screen">
+          <div className="flex items-center justify-center">
             <ClipLoader
               color="#4F46E5"
               loading={loading}
