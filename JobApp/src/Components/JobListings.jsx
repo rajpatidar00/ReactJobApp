@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import JobListing from "../Components/JobListing";
-
-import { ClipLoader } from "react-spinners";
-
-const override = {
-  display: "block",
-  margin: "0 auto",
-};
+import Spinner from "./Spinner";
 
 export default function JobListings({ isHome }) {
   const [jobs, setJobs] = useState([]);
@@ -39,14 +33,7 @@ export default function JobListings({ isHome }) {
         </h2>
         {/* <!-- Job Listing 1 --> */}
         {loading ? (
-          <div className="flex items-center justify-center">
-            <ClipLoader
-              color="#4F46E5"
-              loading={loading}
-              cssOverride={override}
-              size={150}
-            />
-          </div>
+          <Spinner />
         ) : (
           <>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

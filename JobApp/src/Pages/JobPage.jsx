@@ -1,12 +1,30 @@
-import React from "react";
-import JobListings from "../Components/JobListings";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Spinner from "../Components/Spinner";
 
 function JobPage() {
-  return (
-    <section className="bg-blue-50 px-4 py-6">
-      <JobListings />
-    </section>
-  );
+  const { id } = useParams();
+
+  const [job, setJob] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchJob = async () => {
+      try {
+        const res = await fetch(`/api/jobs/${id}`);
+        const data = await res.json();
+        setJob(data);
+      } catch (error) {
+        console.log("Fetch Job Error", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJob();
+  }, []);
+
+  return loading ? <Spinner /> : <h1>{job.title}</h1>;
 }
 
 export default JobPage;
