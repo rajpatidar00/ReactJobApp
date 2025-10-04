@@ -83,6 +83,34 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "type": "Full-Time",
+      "title": "Frontend InternShip",
+      "location": "Indore, Madhya Pradesh",
+      "description": "This for Students Only If you are a Experienced So dont waste your time",
+      "salary": "$100K - 125K",
+      "company": {
+        "name": "Acme Inc.",
+        "description": "veryy very good IT company in the India",
+        "contactEmail": "user.rajpatidar@gmail.com",
+        "contactPhone": "7974918244"
+      },
+      "id": "jcYuFE8"
+    },
+    {
+      "type": "Remote",
+      "title": "Sr. Tester ",
+      "location": "Pune, MA",
+      "description": "This job is all about tested you don't have any need to prepare coding techs for this job.",
+      "salary": "$60K - 70K",
+      "company": {
+        "name": "Nuance Infotech",
+        "description": "This company is all about creating and deliverring best product always",
+        "contactEmail": "bhalushah55@testing.com",
+        "contactPhone": "+91 96694 81005"
+      },
+      "id": "-KpeI4B"
     }
   ]
 }
